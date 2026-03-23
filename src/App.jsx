@@ -12,7 +12,7 @@ import Profile from './pages/Profile'
 function App() {
   return (
     <AuthProvider>
-      <BrowserRouter basename="/filmlog">
+      <BrowserRouter basename="/Full-Stack-Web-Application">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
