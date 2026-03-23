@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import { AuthProvider } from './lib/AuthContext'
 import Navbar from './components/Navbar'
 import ProtectedRoute from './components/ProtectedRoute'
@@ -12,7 +12,7 @@ import Profile from './pages/Profile'
 function App() {
   return (
     <AuthProvider>
-      <BrowserRouter basename="/Full-Stack-Web-Application">
+      <HashRouter>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -30,7 +30,7 @@ function App() {
             </ProtectedRoute>
           } />
         </Routes>
-      </BrowserRouter>
+        </HashRouter>
     </AuthProvider>
   )
 }
